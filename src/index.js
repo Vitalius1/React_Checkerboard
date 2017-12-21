@@ -1,11 +1,12 @@
 console.log('Hello World!');
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './components/Counter';
+import Board from './components/Board';
 
 document.addEventListener('DOMContentLoaded', function () {
+    var rows = prompt("Please enter the number of rows you want the checkerboard to be:");
     ReactDOM.render(
-        React.createElement(Counter),
+        React.createElement(Board, {rows: rows}),
         document.getElementById('mount')
     );
 });
