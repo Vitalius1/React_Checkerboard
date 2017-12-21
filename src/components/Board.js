@@ -2,8 +2,18 @@ import React from 'react';
 import Row from './Row';
 
 function Board (props) {
+    
+    const rows = prompt("Please enter the number of rows you want the checkerboard to be:");
+    
+    var styles = {
+        row: { height: '20px' },
+        cell: { height: '20px', width: '20px', display: 'inline-block' },
+        colorA: { backgroundColor: 'black' },
+        colorB: { backgroundColor: 'red' }
+    }
+    
     return (
-        <Row cells={props.rows}/>
+        <Row cells={rows} styles={styles}/>
     );
 }
 
