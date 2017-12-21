@@ -7,7 +7,7 @@ function Board (props) {
     
     var styles = {
         row: { height: '20px' },
-        cell: { height: '20px', width: '20px', display: 'inline-block' },
+        cell: { height: '20px', width: '20px', display: 'inline-block', border: '1px solid black' },
         colorA: { backgroundColor: 'black' },
         colorB: { backgroundColor: 'red' }
     }
