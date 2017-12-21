@@ -2,14 +2,13 @@ import React from 'react';
 import Cell from './Cell';
 
 function Row (props) {
-    var number = parseInt(props.cells);
-    var CellStyle = props.styles.cell
     
+    var number = parseInt(props.width);
+    var cellStyle = props.cellStyles
     
     const row = Array(number).fill().map((_, idx) => {
-        return (<Cell key={idx} style={CellStyle}/>)
+        return (<Cell key={idx} style={cellStyle}/>)
     })
-    console.log(row);
     
     return (
         <div>{row}</div>

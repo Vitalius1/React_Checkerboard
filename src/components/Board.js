@@ -3,7 +3,7 @@ import Row from './Row';
 
 function Board (props) {
     
-    const rows = prompt("Please enter the number of rows you want the checkerboard to be:");
+    const width = parseInt(prompt("Please enter the number of rows you want the checkerboard to be:"));
     
     var styles = {
         row: { height: '20px' },
@@ -11,9 +11,13 @@ function Board (props) {
         colorA: { backgroundColor: 'black' },
         colorB: { backgroundColor: 'red' }
     }
+
+    const board = Array(width).fill().map((_, idx) => {
+        return (<Row key={idx} width={width} cellStyles={styles.cell}/>)
+    })
     
     return (
-        <Row cells={rows} styles={styles}/>
+        <div>{board}</div>
     );
 }
 
