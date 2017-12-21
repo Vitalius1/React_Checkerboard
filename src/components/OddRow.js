@@ -1,13 +1,13 @@
 import React from 'react';
 import Cell from './Cell';
 
-function Row (props) {
+function OddRow (props) {
     
     var number = parseInt(props.width);
     var cellStyle = props.cellStyles
     
     const row = Array(number).fill().map((_, idx) => {
-        return (<Cell key={idx} style={cellStyle}/>)
+        return (idx % 2 === 0 ? <Cell key={idx} style={cellStyle.cellA}/> : <Cell key={idx} style={cellStyle.cellB}/>);
     })
     
     return (
@@ -15,4 +15,4 @@ function Row (props) {
     );
 }
 
-export default Row;
+export default OddRow;

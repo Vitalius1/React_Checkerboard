@@ -1,5 +1,6 @@
 import React from 'react';
-import Row from './Row';
+import EvenRow from './EvenRow';
+import OddRow from './OddRow';
 
 function Board (props) {
     
@@ -7,13 +8,12 @@ function Board (props) {
     
     var styles = {
         row: { height: '20px' },
-        cell: { height: '20px', width: '20px', display: 'inline-block', border: '1px solid black' },
-        colorA: { backgroundColor: 'black' },
-        colorB: { backgroundColor: 'red' }
+        cellA: { height: '20px', width: '20px', display: 'inline-block', backgroundColor: 'black' },
+        cellB: { height: '20px', width: '20px', display: 'inline-block', backgroundColor: 'red' },
     }
 
     const board = Array(width).fill().map((_, idx) => {
-        return (<Row key={idx} width={width} cellStyles={styles.cell}/>)
+        return (idx % 2 === 0 ? <OddRow key={idx} width={width} cellStyles={styles}/> : <EvenRow key={idx} width={width} cellStyles={styles}/>);
     })
     
     return (
