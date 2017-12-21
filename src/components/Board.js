@@ -1,17 +1,10 @@
 import React from 'react';
+import Row from './Row';
 
-/**
- * A counter button: tap the button to increase the count.
- */
-class Board extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
-    render() {
-        return (
-            <h1>{this.props.rows}</h1>
-        );
-    }
+function Board (props) {
+    return (
+        <Row cells={props.rows}/>
+    );
 }
+
 export default Board;
