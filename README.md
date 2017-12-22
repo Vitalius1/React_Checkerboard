@@ -6,16 +6,21 @@ React application that prompts a user for a number of rows, and then render the 
 
 Setup the project by going to the root folder of the application and type following command in the console:
 ---
+
 ```
 **npm install**
-``1
+```
+
 Usage
 ---
-+Start the development server with this command in the console:
+Start the development server with this command in the console:
+
 ```
 **npm start**
 ```
-+Go to http://localhost:3000 in your browser and follow prompts.
+
+Go to http://localhost:3000 in your browser and follow prompts.
+
 
 Result
 ---
