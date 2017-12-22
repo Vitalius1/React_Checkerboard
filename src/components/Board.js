@@ -4,12 +4,14 @@ import OddRow from './OddRow';
 
 function Board (props) {
     
-    const width = parseInt(prompt("Please enter the number of rows you want the checkerboard to be:"));
+    const width = parseInt(prompt("Please enter the number of rows and you want the checkerboard to be:"));
+    const color1 = prompt("Type Color number one").toLowerCase();
+    const color2 = prompt("Type Color number two").toLowerCase();
     
     var styles = {
         row: { height: '20px' },
-        cellA: { height: '20px', width: '20px', display: 'inline-block', backgroundColor: 'black' },
-        cellB: { height: '20px', width: '20px', display: 'inline-block', backgroundColor: 'red' },
+        cellA: { height: '20px', width: '20px', display: 'inline-block', backgroundColor: color1 },
+        cellB: { height: '20px', width: '20px', display: 'inline-block', backgroundColor: color2 },
     }
 
     const board = Array(width).fill().map((_, idx) => {
