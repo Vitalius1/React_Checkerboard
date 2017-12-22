@@ -8,7 +8,7 @@ Setup the project by going to the root folder of the application and type follow
 ---
 
 ```
-**npm install**
+npm install
 ```
 
 Usage
@@ -16,7 +16,7 @@ Usage
 Start the development server with this command in the console:
 
 ```
-**npm start**
+npm start
 ```
 
 Go to http://localhost:3000 in your browser and follow prompts.
